@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import AuthContext from '../context/AuthContext';
 import jobLogo from "../assets/logoJobPortal.png"
+import { Button } from '@/components/ui/button';
+import { ModeToggle } from '@/components/mode-toggle';
 
 const Navbar = () => {
     const { user, loader, signOutUser } = useContext(AuthContext)
@@ -9,8 +11,9 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to={"/"}>Home</NavLink></li>
-        <li><NavLink to={"/about"}>About</NavLink></li>
-        <li><NavLink to={"/contactUs"}>About</NavLink></li>
+        <li><NavLink to={"/myApplications"}>My Applications</NavLink></li>
+        <li><NavLink to={"/addJob"}>Add a Job</NavLink></li>
+        <li><NavLink to={"/myPostedJobs"}>My Posted Jobs</NavLink></li>
     </>
 
 
@@ -29,7 +32,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar bg-base-100 z-50">
+        <div className="navbar z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,14 +51,36 @@ const Navbar = () => {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm gap-3 dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        {links}
+                        className={`menu menu-sm gap-3 dropdown-content bg-blue-200 rounded-box z-[1] mt-3 w-52 p-2 shadow`}>
+                        {user ?
+                            <div className=' flex items-center flex-row-reverse justify-between gap-2 mr-4'>
+                                <li onClick={handleSignOut}><Button>Logout</Button></li>
+                                <img className='w-10 h-10 rounded-full' src={user.photoURL} alt="Profile" />
+                            </div>
+                            :
+                            ""
+                        }
+                        <li><NavLink to={"/"}>Home</NavLink></li>
+                        <li><NavLink to={"/myApplications"}>My Applications</NavLink></li>
+                        <li><NavLink to={"/addJob"}>Add a Job</NavLink></li>
+                        {user ?
+                            ""
+                            :
+                            <>
+                                <li>
+                                    <NavLink to={"/register"} className="mr-4">Register</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to={"/signin"} className="mr-4">Sign In</NavLink>
+                                </li>
+                            </>
+                        }
                     </ul>
                 </div>
-                <a className="text-xl flex items-center justify-center">
+                <Link to={"/"} className="text-xl flex items-center justify-center">
                     <img className='w-16' src={jobLogo} alt="" />
-                    <h2>Job Portal</h2>
-                </a>
+                    <h2 className='hidden md:inline-block'>Job Portal</h2>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal gap-4 px-1">
@@ -64,16 +89,28 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
 
-                {
+                {loader ?
+                    ""
+                    :
                     user
                         ?
-                        <button onClick={handleSignOut} className='btn'>Log Out</button>
+                        <div  className=' hidden md:flex items-center gap-2 mr-4'>
+                            <Button onClick={handleSignOut}>Logout</Button>
+                            <img className='w-10 h-10 rounded-full' src={user.photoURL} alt="Profile" />
+                        </div>
                         :
-                        <div>
-                            <Link to={"/register"} className='btn mr-2'>Register</Link>
-                            <Link to={"/signin"} className="btn">Sign In</Link>
+                        <div className='hidden md:inline-block'>
+                            <Link to={"/register"} className='mr-2'>
+                                <Button>Register</Button>
+                            </Link>
+                            <Link to={"/signin"} className="mr-4">
+                                <Button className={""} >Sign In</Button>
+                            </Link>
                         </div>
                 }
+                <div>
+                    <ModeToggle></ModeToggle>
+                </div>
 
             </div>
         </div>

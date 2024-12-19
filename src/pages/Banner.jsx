@@ -8,7 +8,7 @@ const Banner = () => {
     return (
         <div className="hero  min-h-96">
             <div className="hero-content justify-center flex-col lg:flex-row-reverse">
-                <div className='w-[40%]'>
+                <div className='w-[40%] hidden md:block'>
                     <motion.img
                         initial={{
                             
@@ -46,7 +46,7 @@ const Banner = () => {
                         src={banner}
                         className="max-w-sm w-80 rounded-t-3xl border border-b-8 border-blue-600 border-l-8 rounded-br-3xl shadow-2xl" />
                 </div>
-                <div className='w-[50%]'>
+                <div className='md:w-[50%]'>
                     <motion.h1
                         initial={{ opacity: 0 }}
                         animate={{ 

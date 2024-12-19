@@ -3,7 +3,7 @@ import navLogo from "../assets/logoJobPortal.png"
 
 const Footer = () => {
     return (
-        <footer className="footer bg-base-200 text-base-content p-10">
+        <footer className="footer p-10">
             <aside>
                 <img className='w-24' src={navLogo} alt="" />
                 <p>

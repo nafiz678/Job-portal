@@ -1,0 +1,86 @@
+.tablee {
+    display: table;
+}
+@media (hover:hover) {
+    .tablee tr.hover:hover,
+  .tablee tr.hover:nth-child(even):hover {
+        --tw-bg-opacity: 1;
+        background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+    }
+}
+@media (hover:hover) {
+    .tablee tr.hover:hover,
+  .tablee tr.hover:nth-child(even):hover {
+        --tw-bg-opacity: 1;
+        background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+    }
+}
+.tablee {
+    position: relative;
+    width: 100%;
+    border-radius: var(--rounded-box, 1rem /* 16px */);
+    text-align: left;
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+}
+.tablee :where(.tablee-pin-rows thead tr) {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+.tablee :where(.tablee-pin-rows tfoot tr) {
+    position: sticky;
+    bottom: 0px;
+    z-index: 1;
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+.tablee :where(.tablee-pin-cols tr th) {
+    position: sticky;
+    left: 0px;
+    right: 0px;
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+}
+.tablee:where([dir="rtl"], [dir="rtl"] *) {
+    text-align: right;
+}
+.tablee :where(th, td) {
+    padding-left: 1rem /* 16px */;
+    padding-right: 1rem /* 16px */;
+    padding-top: 0.75rem /* 12px */;
+    padding-bottom: 0.75rem /* 12px */;
+    vertical-align: middle;
+}
+.tablee tr.active,
+  .tablee tr.active:nth-child(even),
+  .tablee-zebra tbody tr:nth-child(even) {
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+.tablee tr.active,
+  .tablee tr.active:nth-child(even),
+  .tablee-zebra tbody tr:nth-child(even) {
+    --tw-bg-opacity: 1;
+    background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
+.tablee :where(thead tr, tbody tr:not(:last-child), tbody tr:first-child:last-child) {
+    border-bottom-width: 1px;
+    --tw-border-opacity: 1;
+    border-bottom-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
+.tablee :where(thead, tfoot) {
+    white-space: nowrap;
+    font-size: 0.75rem /* 12px */;
+    line-height: 1rem /* 16px */;
+    font-weight: 700;
+    /* color: white; */
+    /* color: var(--fallback-bc,oklch(var(--bc)/0.6)); */
+}
+.tablee :where(tfoot) {
+    border-top-width: 1px;
+    --tw-border-opacity: 1;
+    border-top-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}

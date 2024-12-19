@@ -2,10 +2,15 @@ import Lottie from 'lottie-react';
 import React, { useContext } from 'react';
 import registerAnimation from "../assets/Animation - 1733895200830.json"
 import AuthContext from '../context/AuthContext';
+import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const SignIn = () => {
-    const {signInUser} = useContext(AuthContext)
-
+    const { signInUser } = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+    console.log(location)
+    // const from = location.pathname || "/"
 
 
     const handleSignIn = (e) => {
@@ -16,15 +21,26 @@ const SignIn = () => {
         const password = form.password.value
 
         signInUser(email, password)
-        .then(res=> console.log(res.user))
-        .catch(error=> console.log(error.message))
+            .then(res => {
+                console.log(res.user)
+
+                const user = { email: res.user.email }
+                axios.post(`https://job-portal-server-sigma-seven.vercel.app/jwt`, user,{withCredentials: true} )
+                .then(res=>{
+                    console.log(res)
+                })
+
+
+                navigate(location.state || "/")
+            })
+            .catch(error => console.log(error.message))
     }
 
 
     return (
-        <div className='flex gap-16 justify-center items-center p-10 bg-base-300 rounded-lg my-10'>
+        <div className='flex gap-16 justify-center items-center md:p-10 bg-base-300 rounded-lg my-10'>
             <div className="my-10 flex items-center justify-center ">
-                <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
+                <div className="w-full md:max-w-md bg-white shadow-lg rounded-lg p-8">
                     <h2 className="text-2xl font-semibold text-gray-700 text-center mb-6">
                         Login to Your Job Portal Account
                     </h2>
@@ -36,7 +52,7 @@ const SignIn = () => {
                                 htmlFor="email"
                                 className="block text-sm font-medium text-gray-600"
                             >
-                                Email 
+                                Email
                             </label>
                             <input
                                 type="email"
@@ -68,16 +84,16 @@ const SignIn = () => {
                         <div>
                             <button
                                 type="submit"
-                                className="w-full bg-blue-950 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg
-                            hover:-translate-y-[2px] hover:shadow-lg duration-200 ease-in-out "
+                                className="w-full bg-blue-950 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg duration-500 transition
+                            hover:-translate-y-[2px] hover:shadow-lg  ease-in-out "
                             >
-                                Register
+                                Sign in
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
-            <Lottie className='w-1/4' animationData={registerAnimation} loop={true}  ></Lottie>
+            <Lottie className='w-1/4 hidden md:block' animationData={registerAnimation} loop={true}  ></Lottie>
         </div>
     );
 };
