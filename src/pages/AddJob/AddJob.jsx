@@ -20,7 +20,7 @@ const AddJob = () => {
 
         const job = ({
             ...rest,
-            salaryRange: { min, max, currency },
+            salaryRange: { min: parseInt(min), max: parseInt(max), currency },
             requirements: requirements.split(',').map(s => s.trim()),
             responsibilities: responsibilities.split(',').map(s => s.trim()),
         });
@@ -59,7 +59,7 @@ const AddJob = () => {
                     type="text"
                     id="title"
                     name="title"
-                    className=" text-white w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring"
+                    className=" text-black  w-full px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring"
                 />
             </div>
 
@@ -244,7 +244,8 @@ const AddJob = () => {
                     type="text"
                     id="hr-name"
                     name="hr-name"
-                    
+                    value={user.displayName}
+                    readOnly
                     className="w-full text-black px-3 py-2 border rounded shadow-sm focus:outline-none focus:ring"
                 />
             </div>

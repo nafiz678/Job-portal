@@ -12,6 +12,7 @@ import MyApplication from "@/pages/MyApplication";
 import AddJob from "@/pages/AddJob/AddJob";
 import MyPostedJobs from "@/pages/AddJob/MyPostedJobs";
 import ViewApplication from "@/pages/ViewApplication";
+import AllJobs from "@/pages/all jobs/Alljobs";
 
 
 
@@ -24,6 +25,10 @@ import ViewApplication from "@/pages/ViewApplication";
         {
           path: "/",
           element: <Home></Home>,
+        },
+        {
+          path: "/allJobs",
+          element: <AllJobs></AllJobs> ,
         },
         {
           path: "/jobs/:id",

@@ -11,6 +11,7 @@ const Navbar = () => {
 
     const links = <>
         <li><NavLink to={"/"}>Home</NavLink></li>
+        <li><NavLink to={"/allJobs"}>All Jobs</NavLink></li>
         <li><NavLink to={"/myApplications"}>My Applications</NavLink></li>
         <li><NavLink to={"/addJob"}>Add a Job</NavLink></li>
         <li><NavLink to={"/myPostedJobs"}>My Posted Jobs</NavLink></li>
@@ -55,7 +56,7 @@ const Navbar = () => {
                         {user ?
                             <div className=' flex items-center flex-row-reverse justify-between gap-2 mr-4'>
                                 <li onClick={handleSignOut}><Button>Logout</Button></li>
-                                <img className='w-10 h-10 rounded-full' src={user.photoURL} alt="Profile" />
+                                <img referrerPolicy='no-referrer' className='w-10 h-10 rounded-full' src={user.photoURL} alt="Profile" />
                             </div>
                             :
                             ""
