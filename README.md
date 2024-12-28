@@ -1,8 +1,46 @@
-# React + Vite
+<h1>WhereIsIt</h1>
+<p><strong>Purpose:</strong> WhereIsIt is a Lost and Found web application designed to help users report lost or found items and connect with others to recover their belongings. The platform aims to bridge the gap between individuals who have lost items and those who may have found them.</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>Live URL</h2>
+<p>You can visit the live project <a href="https://your-live-url.com" target="_blank">here</a>.</p>
 
-Currently, two official plugins are available:
+<h2>Key Features</h2>
+<ul>
+    <li>User authentication and secure login system</li>
+    <li>Submit and search for lost or found items</li>
+    <li>Interactive item listing with detailed information</li>
+    <li>Responsive design for all devices</li>
+    <li>Real-time animations using Framer Motion</li>
+    <li>Support for dark mode</li>
+    <li>Optimized for fast loading with lazy image loading</li>
+</ul>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>NPM Packages Used</h2>
+<ul>
+    <li>@lottiefiles/react-lottie-player</li>
+    <li>@radix-ui/react-dropdown-menu</li>
+    <li>@radix-ui/react-slot</li>
+    <li>@shadcn/ui</li>
+    <li>axios</li>
+    <li>class-variance-authority</li>
+    <li>clsx</li>
+    <li>date-fns</li>
+    <li>firebase</li>
+    <li>framer-motion</li>
+    <li>localforage</li>
+    <li>lucide-react</li>
+    <li>match-sorter</li>
+    <li>react</li>
+    <li>react-datepicker</li>
+    <li>react-day-picker</li>
+    <li>react-dom</li>
+    <li>react-hot-toast</li>
+    <li>react-icons</li>
+    <li>react-router-dom</li>
+    <li>shadcn-ui</li>
+    <li>sort-by</li>
+    <li>styled-components</li>
+    <li>swiper</li>
+    <li>tailwind-merge</li>
+    <li>tailwindcss-animate</li>
+</ul>
