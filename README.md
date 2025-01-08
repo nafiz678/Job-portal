@@ -67,27 +67,27 @@ Follow these steps to run the project on your local machine:
 
 
 2. Install Dependencies:
-    - Frontend
-        ```bash
-        cd client
-        npm install
+  - Frontend
+     ```bash
+     cd client
+     npm install
 
 
 3. Set Up Environment Variables:
-        ```bash
-        env
-        Copy code
-        # Server  
-        MONGO_URI=your_mongodb_connection_string
-        # Client  
-        VITE_FIREBASE_API_KEY=your_firebase_api_key
+    ```bash
+    env
+    Copy code
+    # Server  
+    MONGO_URI=your_mongodb_connection_string
+    # Client  
+    VITE_FIREBASE_API_KEY=your_firebase_api_key
 
 4. Run the Development Servers:
 
-    - Start the frontend:
-        ```bash
-        cd server
-        npm run dev
+- Start the frontend:
+    ```bash
+    cd server
+    npm run dev
 
 5. Access the Application: </br>
 Open your browser and navigate to http://localhost:5000.
