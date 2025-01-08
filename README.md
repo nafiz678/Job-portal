@@ -1,46 +1,93 @@
-<h1>WhereIsIt</h1>
-<p><strong>Purpose:</strong> WhereIsIt is a Lost and Found web application designed to help users report lost or found items and connect with others to recover their belongings. The platform aims to bridge the gap between individuals who have lost items and those who may have found them.</p>
+# Career Connect 💼
 
-<h2>Live URL</h2>
-<p>You can visit the live project <a href="https://your-live-url.com" target="_blank">here</a>.</p>
+Career Connect is a modern and responsive job portal website that connects job seekers and employers seamlessly. The platform provides an intuitive interface, comprehensive job search options, and efficient employer tools for managing job postings and applications.  
 
-<h2>Key Features</h2>
-<ul>
-    <li>User authentication and secure login system</li>
-    <li>Submit and search for lost or found items</li>
-    <li>Interactive item listing with detailed information</li>
-    <li>Responsive design for all devices</li>
-    <li>Real-time animations using Framer Motion</li>
-    <li>Support for dark mode</li>
-    <li>Optimized for fast loading with lazy image loading</li>
-</ul>
+--- 
 
-<h2>NPM Packages Used</h2>
-<ul>
-    <li>@lottiefiles/react-lottie-player</li>
-    <li>@radix-ui/react-dropdown-menu</li>
-    <li>@radix-ui/react-slot</li>
-    <li>@shadcn/ui</li>
-    <li>axios</li>
-    <li>class-variance-authority</li>
-    <li>clsx</li>
-    <li>date-fns</li>
-    <li>firebase</li>
-    <li>framer-motion</li>
-    <li>localforage</li>
-    <li>lucide-react</li>
-    <li>match-sorter</li>
-    <li>react</li>
-    <li>react-datepicker</li>
-    <li>react-day-picker</li>
-    <li>react-dom</li>
-    <li>react-hot-toast</li>
-    <li>react-icons</li>
-    <li>react-router-dom</li>
-    <li>shadcn-ui</li>
-    <li>sort-by</li>
-    <li>styled-components</li>
-    <li>swiper</li>
-    <li>tailwind-merge</li>
-    <li>tailwindcss-animate</li>
-</ul>
+## 🌟 Overview  
+Career Connect is a full-stack web application designed to:  
+- Allow job seekers to browse, search, and apply for jobs.  
+- Enable employers to post jobs and manage applications.  
+- Provide a personalized dashboard for both job seekers and employers.  
+- Facilitate secure and easy communication between job seekers and employers.  
+
+---  
+
+## 🛠️ Technologies Used  
+
+### Frontend:  
+- **React**: Dynamic UI rendering.  
+- **Tailwind CSS**: Responsive and modern styling.  
+
+### Backend:  
+- **Node.js** and **Express.js**: Backend framework for API creation.  
+- **MongoDB**: NoSQL database for data storage.  
+- **Prisma ORM**: For database interaction.  
+
+### Others:  
+- **Axios**: For HTTP requests.  
+- **JWT**: For secure user authentication.  
+- **Firebase**: For user authentication and hosting.  
+
+---  
+
+## ✨ Main Features  
+- **Job Search and Filter**: Job seekers can search for jobs by keywords, location, and category.  
+- **Employer Dashboard**: Employers can create, update, and delete job postings.  
+- **Application Tracking**: Job seekers can track their applications, and employers can review applicant profiles.  
+- **User Authentication**: Login and sign-up functionality with Firebase.  
+- **Responsive Design**: Optimized for both desktop and mobile devices.  
+
+---  
+
+## 📦 Dependencies  
+- **axios**: Promise-based HTTP client.  
+- **firebase**: For authentication and hosting services.  
+- **react**: JavaScript library for building user interfaces.  
+- **react-dom**: React library for DOM rendering.  
+- **react-router-dom**: Declarative routing for React.  
+- **react-icons**: Library of popular icons.  
+- **react-toastify**: Notifications for React.  
+- **sweetalert2**: Beautiful and customizable popups.  
+- **tailwindcss**: Utility-first CSS framework for building custom designs.  
+- **prisma**: Database ORM for efficient database interaction.  
+
+To see the full list of dependencies, check the [package.json](./package.json) file.  
+
+
+---
+
+## 🚀 How to Run Locally
+Follow these steps to run the project on your local machine:
+
+1. **Clone the Repository**:  
+   ```bash  
+   git clone https://github.com/nafiz678/restaurant-project-client.git 
+   cd restaurant-project-client
+
+
+2. Install Dependencies:
+- Frontend
+    ```bash
+    cd client
+    npm install
+
+
+3. Set Up Environment Variables:
+    ```bash
+    env
+    Copy code
+    # Server  
+    MONGO_URI=your_mongodb_connection_string
+    # Client  
+    VITE_FIREBASE_API_KEY=your_firebase_api_key
+
+4. Run the Development Servers:
+
+- Start the frontend:
+    ```bash
+    cd server
+    npm run dev
+
+5. Access the Application: </br>
+Open your browser and navigate to http://localhost:5000.
